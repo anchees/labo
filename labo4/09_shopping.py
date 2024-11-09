@@ -68,4 +68,9 @@ for i in sweets:
     for j in sweets[i]:
         if j['price'] < a:
             lowprice[i].append(j)
-print(lowprice)
+for i in lowprice:
+    print(i)
+    for j in lowprice[i]:
+        print(j['shop'],j['price'])
+    print("\n")
+

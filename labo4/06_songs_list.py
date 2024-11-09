@@ -32,7 +32,9 @@ for i in violator_songs_list:
         summa+=i[1]
     elif i[0]=='Clean':
         summa+=i[1]
-print("Три песни звучат",round(summa,2),"минут")
+summa = "{:06.2f}".format(summa)
+print("Три песни звучат",summa,"минут")
+
 
 # Есть словарь песен группы Depeche Mode
 violator_songs_dict = {
@@ -52,4 +54,5 @@ violator_songs_dict = {
 
 # TODO здесь ваш код
 songs=violator_songs_dict['Sweetest Perfection']+violator_songs_dict['Policy of Truth']+violator_songs_dict['Blue Dress']
-print("А дургие три песни звучат",round(songs,2),"минут")
+songs="{:03d}".format(int(round(songs)))
+print("А дургие три песни звучат",songs,"минут")
