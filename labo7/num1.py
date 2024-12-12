@@ -21,7 +21,7 @@ def norecursion():
             l+=1
             r-=1
         return True
-    k=(input('ввдите последоватлеьность: '))
+    k=(input("ввдите последоватлеьность: "))
     print(f(k))
     k=[1,2,3,2,1]
     print(f(k))
