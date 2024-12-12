@@ -1,34 +1,33 @@
 def recursion():
-    def f(one, two, k, mn):
-        mn.add((one, two))
-        if one==k or two==k: return 0
-        f(one+1, two, k, mn)
-        f(one, two+1, k, mn)
-    one = 0
-    two = 0
-    k = int(input("Введите k: "))
-    mn = set()
-    f(one, two, k, mn)
-    print(mn)
-
-
-def norecursion():
+    def f(two,one,k,a):
+        a.append(f'{one}:{two}')
+        if k==two or k==one: return [a]
+        return f(one+1,two,k,a[:])+f(one,two+1,k,a[:])
+    k=int(input("Введите k "))
     one=0
     two=0
-    result=set()
-    k=int(input("Введите k "))
-    for one in range (k+1):
-        for two in range(k+1):
-            if (one==k and two==k):
-                continue
-            result.add((one,two))
-        if (one==k and two==k):
-            continue
-        result.add((one,two))
+    result=f(one,two,k,[])
     print(result)
+    
+
+def norecursion():
+    def f(k):
+        l=0
+        r=len(k)-1
+        zap=0
+        while(l<r):
+            if k[l]!=k[r]:
+                return False
+            l+=1
+            r-=1
+        return True
+    k=(input('ввдите последоватлеьность: '))
+    print(f(k))
+    k=[1,2,3,2,1]
+    print(f(k))
 
 
-print("С использованием рекусрии:")
+print("С использованием рекусрии (11 вариант):")
 recursion()
-print("Без использования рекусрии:")
+print("Без использования рекусрии (9 вариант):")
 norecursion()
