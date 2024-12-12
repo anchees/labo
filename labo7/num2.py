@@ -10,7 +10,7 @@ def norecursion():
     i=int(input("Введите i "))
     x=1
     if i!=0:
-        for a in range(x,i):
+        for _ in range(x,i):
             x=(x+1)/(x+2)
     print(x)
 

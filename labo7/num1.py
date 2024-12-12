@@ -9,12 +9,10 @@ def recursion():
     result=f(one,two,k,[])
     print(result)
     
-
 def norecursion():
     def f(k):
         l=0
         r=len(k)-1
-        zap=0
         while(l<r):
             if k[l]!=k[r]:
                 return False
