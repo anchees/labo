@@ -36,11 +36,11 @@ def calc(op, i=0):
     return operation
 
 
-def povtor(times):
+def povtor(kol):
     def decorator(step):
         def schet(*args, **kwargs):
             result = []
-            for _ in range(times):
+            for _ in range(kol):
                 result.append(step(*args, **kwargs))
             return result
         return schet
