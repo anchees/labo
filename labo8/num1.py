@@ -15,7 +15,5 @@ def calc(op, i=0):
     return operation
 
 test=calc("*",i=1)
-
 test(5)
-
 test(2)

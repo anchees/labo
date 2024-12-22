@@ -26,3 +26,4 @@ for i in otvet:
 ```
 
 ## Скриншоты результатов
+![res](images/res.png)
