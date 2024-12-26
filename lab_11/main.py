@@ -92,7 +92,7 @@ while runing:
     pygame.display.update()
     timer.tick(4)
 
-# Проверка на выход за края  
+
     if not(0<=x+m_x<kolonki and 0<=y+m_y<kolonki):
         runing = False
 pygame.quit()
