@@ -17,10 +17,10 @@ def calc(op, i=0):
 
 def povtor(kol):
     def decorator(step):
-        def schet(*args, **kwargs):
+        def schet(*args):
             result = []
             for _ in range(kol):
-                result.append(step(*args, **kwargs))
+                result.append(step(*args))
             return result
         return schet
     return decorator
