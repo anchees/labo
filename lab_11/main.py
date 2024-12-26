@@ -5,16 +5,16 @@ screen = pygame.display.set_mode((620, 620))
 pygame.display.set_caption("Snake game")
 icon=pygame.image.load('images/icon.png')
 pygame.display.set_icon(icon)
-# Размеры поля
+
 size_block = 40
 kolonki = 15
-# Цвета
+
 background = (0, 8, 255)
 white = (255, 255, 255)
 blue = (0, 200, 245)
 snake_color = (0, 200, 0)
 red=(255, 42, 0)
-# Начальный размер змеи и координаты
+
 snake_block = [[7, 5], [7, 6], [7, 7]]
 
 def draw(color, x, y):
@@ -52,7 +52,7 @@ while runing:
             elif event.key == pygame.K_RIGHT and m_x != -1:
                 m_y = 0
                 m_x = 1
-# Отрисовка поля
+# Поле
     screen.fill(background)
     for y in range(kolonki):
         for x in range(kolonki):
