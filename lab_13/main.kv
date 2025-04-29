@@ -1,0 +1,45 @@
+<MainWidget>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+
+    TextInput:
+        id: shtuka
+        hint_text: "плитка/ламинат/обои"
+        multiline: False
+        font_size: 20
+        size_hint_y: 0.15
+
+    TextInput:
+        id: price
+        hint_text: "Цена за единиицу строительного материала"
+        multiline: False
+        font_size: 20
+        size_hint_y: 0.15
+
+    TextInput:
+        id: width
+        hint_text: "Ширина"
+        multiline: False
+        font_size: 20
+        size_hint_y: 0.15
+
+    TextInput:
+        id: length
+        hint_text: "Длина"
+        multiline: False
+        font_size: 20
+        size_hint_y: 0.15
+
+    Button:
+        text: "Рассчитать и сохранить в DOC"
+        size_hint_y: 0.2
+        font_size: 22
+        on_press: root.on_button_press()
+
+    Label:
+        id: result_label
+        text: ""
+        font_size: 20
+        size_hint_y: 0.2
+
