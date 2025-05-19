@@ -1,4 +1,4 @@
-# Лабораторная работа №14 | Вариант 9
+# Лабораторная работа №15 | Вариант 9
 ## Задание 
 1) Спроектируйте БД с использованием crow’s foot notation.
 2) Реализуйте парсер для сбора данных с веб-страницы.
@@ -23,12 +23,12 @@
 ## Проделанная работа
 - Для создания базы данных сначала запускаем файл ```parsing.py```, а потом файл ```goodbd.py```.
 ### Crow’s foot notation
-![crn](images\crn.png)
+![crn](images/crn.png)
 ### База данных
-1) ![1](images\1.png)
-2) ![2](images\2.png)
-3) ![3](images\3.png)
-4) ![4](images\4.png)
+1) ![1](images/1.png)
+2) ![2](images/2.png)
+3) ![3](images/3.png)
+4) ![4](images/4.png)
 ### Запросы
 #### 1-ый [Топ N больших созвездий по площади (в кв. градусах)]
 ```sql
@@ -37,7 +37,7 @@ FROM constellations
 ORDER BY area DESC
 LIMIT 5;
 ```
-![z1](images\z1.png)
+![z1](images/z1.png)
 и т.д.
 #### 2-ой [Топ N маленьких созвездий по площади (в кв. градусах)]
 ```sql
@@ -46,7 +46,7 @@ FROM constellations
 ORDER BY area ASC
 LIMIT 5;
 ```
-![z2](images\z2.png)
+![z2](images/z2.png)
 #### 3-ий [Созвездия с группировкой по группам]
 ```sql
 SELECT f.name AS family_name, COUNT(c.id) AS count
@@ -55,7 +55,7 @@ LEFT JOIN families f ON c.family_id = f.id
 GROUP BY f.name
 ORDER BY count DESC;
 ```
-![z3](images\z3.png)
+![z3](images/z3.png)
 и т.д.
 #### 4-ый [Созвездия с группировкой по областям]
 ```sql
@@ -64,5 +64,5 @@ FROM constellations
 GROUP BY rank
 ORDER BY rank;
 ```
-![z4](images\z4.png)
+![z4](images/z4.png)
 и т.д.
