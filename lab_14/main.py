@@ -67,33 +67,5 @@ INSERT INTO OrderItems VALUES
 """)
 
 conn.commit()
-
 cursor = conn.cursor()
-
-print("\n1. Все книги с именами авторов:")
-for row in cursor.execute("""
-SELECT Books.Title, Books.Price, Authors.FirstName, Authors.LastName
-FROM Books
-JOIN Authors ON Books.AuthorID = Authors.AuthorID
-"""):
-    print(row)
-
-print("\n2. Заказы и книги в них:")
-for row in cursor.execute("""
-SELECT Orders.OrderID, Orders.OrderDate, Books.Title, OrderItems.Quantity
-FROM Orders
-JOIN OrderItems ON Orders.OrderID = OrderItems.OrderID
-JOIN Books ON OrderItems.BookID = Books.BookID
-"""):
-    print(row)
-
-print("\n3. Сумма каждого заказа:")
-for row in cursor.execute("""
-SELECT Orders.OrderID, SUM(Books.Price * OrderItems.Quantity) AS Total
-FROM Orders
-JOIN OrderItems ON Orders.OrderID = OrderItems.OrderID
-JOIN Books ON OrderItems.BookID = Books.BookID
-GROUP BY Orders.OrderID
-"""):
-    print(row)
 conn.close()

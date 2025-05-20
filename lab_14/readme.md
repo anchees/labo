@@ -15,12 +15,19 @@
     * Таблица Заказы с информацией о заказах книг, такой как дата заказа и статус доставки.
 ## Проделанная работа
 ### Crow’s foot notation
-![dbdiagramm](images\diagram.png)
+![dbdiagram](images\diagram.png)
 ### База данных
 ![1](images\bd1.png)
 ![2](images\bd2.png)
 ![3](images\bd3.png)
 ![4](images\bd4.png)
 
+### Запрсоы
+1) Все книги с именами авторов:
+![z1](images/z1.png)
+2) Заказы и книги в них:
+![z1](images/z2.png)
+3) Сумма каждого заказа:
+![z3](images/z3.png)
 ## Использованные материалы
 https://dbdiagram.io/d
